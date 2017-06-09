@@ -9,14 +9,14 @@ import { Exhibit } from './exhibit.model';
   <br>
   <div *ngFor="let dino of dinoList">
   <hr>
-  <h3>Name: {{dino.name}}</h3>
+  <a (click)="editDino(dino)"><h3>Name: {{dino.name}}</h3>
   <h3>Species: {{dino.species}}</h3>
   <h3>Age: {{dino.age}}</h3>
   <h3>Current Location: {{dino.location}}</h3>
   <h3>Number of Caretakers: {{dino.caretakers}}</h3>
   <h3>Sex: {{dino.sex}}</h3>
   <h3>Likes: {{dino.likes}}</h3>
-  <h3>Dislikes: {{dino.dislikes}}</h3>
+  <h3>Dislikes: {{dino.dislikes}}</h3></a>
   </div>
   <hr>
   `
@@ -24,6 +24,9 @@ import { Exhibit } from './exhibit.model';
 
 export class ExhibitList {
   @Input() dinoList: Exhibit[];
-  @Output() editDino = new EventEmitter();
+  @Output() editDinoSender = new EventEmitter();
 
+  editDino(editedDino: Exhibit) {
+    this.editDinoSender.emit(editedDino);
+  }
 }
