@@ -8,6 +8,7 @@ import { Exhibit } from './exhibit.model';
   <h1>Exhibit List</h1>
   <br>
   <div *ngFor="let dino of dinoList">
+  <hr>
   <h3>Name: {{dino.name}}</h3>
   <h3>Species: {{dino.species}}</h3>
   <h3>Age: {{dino.age}}</h3>
@@ -17,6 +18,7 @@ import { Exhibit } from './exhibit.model';
   <h3>Likes: {{dino.likes}}</h3>
   <h3>Dislikes: {{dino.dislikes}}</h3>
   </div>
+  <hr>
   `
 })
 
