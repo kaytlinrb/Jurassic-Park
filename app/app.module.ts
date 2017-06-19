@@ -5,10 +5,11 @@ import { FormsModule }  from '@angular/forms';
 import { ExhibitList } from './list-exhibits.component';
 import { NewDino } from './new-dino.component'
 import { EditDino } from './edit-dino.component';
+import { MaturityPipe } from './maturity.pipe';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule],
-  declarations: [ AppComponent, ExhibitList, NewDino, EditDino ],
+  declarations: [ AppComponent, ExhibitList, NewDino, EditDino, MaturityPipe ],
   bootstrap:    [ AppComponent ]
 })
 
